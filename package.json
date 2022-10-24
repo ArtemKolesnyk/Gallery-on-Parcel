@@ -1,0 +1,27 @@
+{
+  "name": "gallery-on-parcel",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtemKolesnyk/Gallery-on-Parcel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtemKolesnyk/Gallery-on-Parcel/issues"
+  },
+  "homepage": "https://github.com/ArtemKolesnyk/Gallery-on-Parcel#readme"
+}
