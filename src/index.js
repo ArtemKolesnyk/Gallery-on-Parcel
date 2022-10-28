@@ -1,5 +1,8 @@
-import galleryItems from './js/data';
+import galleryItems from './js/data.json';
+import gallerycardsTpl from './tamplates/gallery-cards.hbs' 
+// import galleryCardTpl from './tamplates/gallery-card.hbs'; is one gallery card
 import { clickOnImg } from './js/modal';
+
 
 const refs = {
   ListGalleryItems: document.querySelector('.js-gallery'),
@@ -17,25 +20,8 @@ refs.ListGalleryItems.insertAdjacentHTML('beforeend', markupItemGallery);
 refs.ListGalleryItems.addEventListener('click', clickOnImg);
 
 function creatMarkupGaleryItem(galleryItems) {
-  return galleryItems
-    .map(({preview, original, description}) => {
-    return `
-      <li class="gallery__item">
-        <a
-          class="gallery__link"
-          href="${original}"
-        >
-          <img
-            loading="lazy"
-            class="gallery__image"
-            src="${preview}"
-            data-source="${original}"
-            alt="${description}"
-          />
-        </a>
-      </li>
-    `
-    }).join('');
+  // return galleryItems.map(galleryCardTpl).join(''); render one card
+  return gallerycardsTpl(galleryItems); 
 };
 
  function updataAtrr(src = '', alt = '') { 
